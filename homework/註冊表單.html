@@ -1,1 +1,62 @@
-
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊表單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        label, input, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>註冊表單</h2>
+    <form action="#" method="POST">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="age">年齡：</label>
+        <input type="number" id="age" name="age" min="0" required>
+        
+        <label for="gender">性別：</label>
+        <select id="gender" name="gender" required>
+            <option value="male">男性</option>
+            <option value="female">女性</option>
+            <option value="other">其他</option>
+        </select>
+        
+        <label for="interests">興趣：</label>
+        <input type="text" id="interests" name="interests">
+        
+        <label for="phone">手機號碼：</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="輸入10位數字" required>
+        
+        <label for="email">電子郵件：</label>
+        <input type="email" id="email" name="email" required>
+        
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
